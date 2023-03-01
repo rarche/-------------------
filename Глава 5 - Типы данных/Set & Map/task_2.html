@@ -1,0 +1,19 @@
+<script>
+
+'use strict';
+
+function aclean(arr) {
+    let map = new Map();
+
+    for (let i of arr) {
+        let letters = (Array.from(new Set(i)).sort().join('').toLowerCase())
+        map.set(letters,i)
+    }
+
+    return Array.from(map.values())
+}
+
+let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+alert( Array.from(aclean(arr)))
+</script>

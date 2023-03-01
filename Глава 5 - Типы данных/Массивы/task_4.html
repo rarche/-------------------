@@ -1,0 +1,38 @@
+<script>
+
+'use strict';
+
+function getMaxSubSum(arr) {
+    let sum = 0;
+    let count = 0;
+    let max_sum = 0
+
+    for (let i of arr) {
+        if ((sum + i) > 0) {
+            if (i > sum) {
+                max_sum = i
+            }
+            sum += i;
+            ++count;
+        } else if ((sum + i) < 0) {
+            if (sum > max_sum) {
+                max_sum = sum
+            }
+            sum = 0
+            count = 0
+        } 
+    }
+
+    if (max_sum > sum) {
+        return max_sum;
+    } return sum;
+}
+
+alert(getMaxSubSum([-1, 2, 3, -9]))
+alert(getMaxSubSum([2, -1, 2, 3, -9]))
+alert(getMaxSubSum([-1, 2, 3, -9, 11]))
+alert(getMaxSubSum([-2, -1, 1, 2]))
+alert(getMaxSubSum([100, -9, 2, -3, 5]))
+alert(getMaxSubSum([1, 2, 3]))
+alert(getMaxSubSum([-1, -2, -3]))
+</script>

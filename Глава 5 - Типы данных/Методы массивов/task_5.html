@@ -1,0 +1,16 @@
+<script>
+    'use strict';
+    
+function copySorted (arr) {
+    let arr_copy = arr.slice()
+    return arr_copy.sort((a,b) => a.localeCompare(b))
+}
+
+let arr = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(arr);
+
+alert( sorted );
+alert( arr );
+
+    </script>

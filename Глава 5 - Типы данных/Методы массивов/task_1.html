@@ -1,0 +1,17 @@
+<script>
+
+    'use strict';
+    
+function camelize(str) {
+    let arr = str.split('-')
+    if (arr[0]) {
+        return (str[0] + (arr.map(item => item[0].toUpperCase() + item.slice(1)).join('').slice(1)))
+    }
+        arr.shift()
+        return arr.map(item => item[0].toUpperCase() + item.slice(1)).join('')
+}
+    
+alert(camelize("background-color"))
+alert(camelize("list-style-image"));
+alert(camelize("-webkit-transition"))
+    </script>

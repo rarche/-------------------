@@ -1,0 +1,26 @@
+<script>
+'use strict';
+
+function topSalary(salaries) {
+    let max = 0;
+    let top_name = null;
+
+    for ( let [name,salary] of Object.entries(salaries)) {
+        if (salary > max) {
+            max = salary;
+            top_name = name;
+        }
+    }
+
+    return top_name;
+}
+
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
+
+alert(topSalary(salaries))
+
+</script>

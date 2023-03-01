@@ -1,0 +1,21 @@
+<script>
+    'use strict';
+    
+    function getLocalDay(date) {
+        let days_names = {
+            0:7,
+            1:1,
+            2:2,
+            3:3,
+            4:4,
+            5:5,
+            6:6
+        }
+    
+        return days_names[date.getDay()];
+    }
+    
+    let date = new Date(2012, 0, 3);
+    alert( getLocalDay(date) ); 
+    
+    </script>

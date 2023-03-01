@@ -1,0 +1,11 @@
+<script>
+'use strict';
+
+function pow(x,n) {
+    return ((x < 1 || n < 1) ? 'Введите натуральное число': x**n)
+}
+
+let x = +prompt('Введите число x (>1)',1);
+let n = +prompt('Введите число n (>1)',1);
+alert(pow(x,n))
+</script>

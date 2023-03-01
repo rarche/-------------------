@@ -1,0 +1,24 @@
+<script>
+'use strict';
+
+let calculator = {
+    read() {
+        let num_1 = +prompt('введите 1-ое число',0);
+        let num_2 = +prompt('введите 2-ое число',0);
+
+        this.num_1 = num_1;
+        this.num_2 = num_2;
+    },
+
+    sum() {return this.num_1 + this.num_2},
+
+    mul() {return this.num_1 * this.num_2}
+}
+
+calculator.read()
+
+alert(calculator.sum())
+
+alert(calculator.mul())
+
+</script>

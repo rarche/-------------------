@@ -1,0 +1,15 @@
+<script>
+'use strict'
+
+let user = {
+  name: "Василий Иванович",
+  age: 35
+};
+
+let JSON_user = JSON.stringify(user) 
+
+let user_from_JSON = JSON.parse(JSON_user)
+
+alert (user_from_JSON.name)
+
+</script>

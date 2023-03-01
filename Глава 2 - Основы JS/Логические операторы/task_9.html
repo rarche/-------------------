@@ -1,0 +1,25 @@
+<script>
+
+'use strict';
+
+let user_type = prompt ('Who is there?','');
+
+if (user_type == '' || user_type == null) {
+    alert ('Cancelled');
+} else if (user_type != 'Админ') {
+    alert ("I don't know you!");
+} else {
+    
+    let password;
+
+    password = prompt('Input password','');
+    if (password == '' || password == null) {
+        alert ('Cancelled');
+    } else if (password != 'Я главный') {
+        alert ('Wrong password');
+    } else {
+        alert ('Здравствуйте!')
+    }
+}
+
+</script>

@@ -1,0 +1,17 @@
+<script>
+'use strict';
+
+function readNumber() {
+    let user_num = +prompt('Введите число');
+    if (user_num == '0') {
+        return null;
+
+    } else if (isFinite(user_num)) {
+        return user_num;
+
+    } return readNumber();
+}
+
+alert(readNumber())
+
+</script>

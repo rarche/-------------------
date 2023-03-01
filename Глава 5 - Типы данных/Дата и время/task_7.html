@@ -1,0 +1,14 @@
+<script>
+    'use strict';
+    
+    function getSecondsToTomorrow() {
+        let today = new Date();
+        let tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        tomorrow.setHours(0,0,0,0);
+        let diff = tomorrow - today;
+        return diff/1000
+    }
+    
+ alert(getSecondsToTomorrow())
+    </script>
